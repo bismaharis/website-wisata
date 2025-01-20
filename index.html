@@ -9,97 +9,155 @@
   <body>
     <header>
       <div class="header">
-        <a href="#" class="logo">Dicoding CSS Bisma</a>
-        <nav>
+        <a href="#" class="logo">LombokNesia</a>
+        <button class="mobileMenu" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav id="mainNav">
           <ul>
             <li><a href="#beranda">Beranda</a></li>
-            <li><a href="#artikel">Artikel</a></li>
-            <li><a href="#kategori">Kategori</a></li>
-            <li><a href="#kontak">Kontak</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Destinasi</a>
+              <div class="dropdownKonten">
+                <a href="#">Pantai</a>
+                <a href="#">Gunung</a>
+                <a href="#">Sirkuit</a>
+              </div>
+            </li>
+            <li><a href="#">Artikel</a></li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="#">Kontak</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main class="main">
-      <article>
-        <section class="artikel">
-          <img
-            src="/Dicoding/src/1.jpg"
-            alt="Pemandangan indah Pulau Lombok"
-            class="artikelImg" />
-          <p>
-            Pulau Lombok terletak di kepulauan Sunda Kecil atau Nusa Tenggara.
-            Selat Lombok memisahkan pulau dari Bali di sebelah barat dan Selat
-            Alas dari Sumbawa di sebelah timur. Pulau ini tidak lebih bulat dan
-            panjangnya kurang lebih 70 km dengan "ekor" di sisi baratnya.
-            Sumber: <a href="https://en.wikipedia.org/wiki/Lombok">Wikipedia</a>
-          </p>
+    <div class="hero" id="imageSlider">
+      <div class="slide slideAktif">
+        <img src="src/1.jpg" alt="Presean" />
+        <div class="heroKonten">
+          <h1>Selamat Datang di Lombok</h1>
+          <p>Jelajahi Lombok Dengan Segala Keindahannya</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="src/3.jpeg" alt="Gunung Rinjani" />
+        <div class="heroKonten">
+          <h1>Gunung Rinjani</h1>
+          <p>Rinjani, Negeri Dongeng yang Nyata</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="src/4.jpeg" alt="Mandalika" />
+        <div class="heroKonten">
+          <h1>Sirkuit Mandalika</h1>
+          <p>Balapan Terkeren di Indonesia</p>
+        </div>
+      </div>
+      <button class="sliderBtn prev" id="prevBtn" aria-label="Previous Slide">
+        &lt;
+      </button>
+      <button class="sliderBtn next" id="nextBtn" aria-label="Next Slide">
+        &gt;
+      </button>
+    </div>
 
-          <p>
-            Pulau Lombok dan tetangganya Bali hampir sama secara ukuran dan
-            populasi, dan memiliki beberapa warisan budaya yang sama. Namun,
-            secara administratif, Lombok, bersama dengan Sumbawa yang lebih
-            besar dan lebih jarang penduduk di sebelah timur, merupakan bagian
-            dari Nusa Tenggara Barat. Sebagian besar pulau kecil di sekitar
-            Lombok disebut Gili. Sumber:
-            <a href="https://en.wikipedia.org/wiki/Lombok">Wikipedia</a>
-          </p>
+    <main>
+      <div class="main">
+        <article>
+          <div class="artikel">
+            <h2>Keindahan Pulau Lombok</h2>
+            <div class="artikelMeta">
+              <span class="tanggal">2 Januari 2025</span>
+              <span class="kategori">Wisata</span>
+            </div>
+            <img
+              src="src/5.jpeg"
+              alt="Pantai Pink"
+              class="artikelImg" />
+            <div class="artikelKonten">
+              <p>
+                Pulau Lombok terletak di kepulauan Sunda Kecil atau Nusa
+                Tenggara. Selat Lombok memisahkan pulau dari Bali di sebelah
+                barat dan Selat Alas dari Sumbawa di sebelah timur. Pulau ini
+                tidak lebih bulat dan panjangnya kurang lebih 70 km dengan
+                "ekor" di sisi baratnya.
+              </p>
+              <h3>Pantai Eksotis</h3>
+              <p>Pantai Lombok</p>
+              <h3>7 Summit Lombok</h3>
+              <p>Gunung</p>
+              <h3>Sirkuit Mandalika</h3>
+              <p>Sirkuit</p>
+              <div class="artikelTags">
+                <span>#Lombok</span>
+                <span>#Wisata</span>
+                <span>#Indonesia</span>
+              </div>
+            </div>
+          </div>
+        </article>
 
-          <p>
-            Sekitar 3.168.692 orang tinggal di pulau ini, menurut sensus sepuluh
-            tahunan 2010, dan 3.758.631 menurut sensus 2020. Jumlah yang
-            diperkirakan secara resmi untuk pertengahan tahun 2023 adalah
-            3.963.842. Dalam bahasa Sasak, "lombok" berarti "lurus" atau
-            "jujur". Sumber:
-            <a href="https://en.wikipedia.org/wiki/Lombok">Wikipedia</a>
-          </p>
-        </section>
-      </article>
-
-      <aside>
-        <section class="sidebar">
-          <h3 class="sidebarJudul">Lombok Hari Ini</h3>
-          <img
-            src="/Dicoding/src/2.jpg"
-            alt="Pemandangan indah di Orong Bukal, Lombok"
-            class="sidebarImg" />
-          <p>Orong bukal wisata hidden gem di Lombok, raja ampat Lombok</p>
-        </section>
-
-        <section>
-          <h3 class="judulSidebar">Kategori</h3>
-          <ul class="kategoriList">
-            <li>Wisata</li>
-            <li>Populer</li>
-            <li>Event</li>
-          </ul>
-        </section>
-      </aside>
+        <aside>
+          <div class="sidebar">
+            <h3 class="sidebarJudul">Hidden Gem Lombok</h3>
+            <div class="populerPost">
+              <div class="postCard">
+                <img
+                  src="src/2.jpg"
+                  alt="Orong Bukal"
+                  class="sidebarImg" />
+                <h4>Orong Bukal</h4>
+                <p>
+                  Orong bukal wisata hidden gem di lombok, raja ampat lombok
+                </p>
+              </div>
+              <div class="postCard">
+                <img
+                  src="src/6.jpeg"
+                  alt="Pantai Telawas"
+                  class="sidebarImg" />
+                <h4>Pantai Telawas</h4>
+                <p>Pantai Telawas di Lombok Tengah</p>
+              </div>
+            </div>
+            <h3 class="sidebarJudul">Kategori</h3>
+            <ul class="katagoriList" id="katagoriList"></ul>
+            <div class="cuaca">
+              <h3 class="sidebarJudul">Cuaca Hari Ini</h3>
+              <div class="cuacaInfo">
+                <span class="temp">26°C</span>
+                <span class="kondisi">Berawan</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
     </main>
 
     <footer>
       <div class="footerIsi">
-        <section class="footerSection">
+        <div class="footerSection">
           <h3 class="footerJudul">Tentang Kami</h3>
           <p>
-            Dicoding CSS Bisma adalah website informasi terkini Lombok sebagai
-            tugas Dicoding.
+            LombokNesia adalah website informasi terkini Lombok sebagai tugas
+            Dicoding Bisma.
           </p>
-        </section>
+        </div>
 
-        <section class="footerSection">
-          <h3 class="footerJudul">Tautan Penting</h3>
+        <div class="footerSection">
+          <h3 class="footerJudul">Informasi</h3>
           <ul class="footerLink">
-            <li><a href="#">Tentang Kami</a></li>
-            <li><a href="#">Kebijakan Privasi</a></li>
-            <li><a href="#">Syarat dan Ketentuan</a></li>
-            <li><a href="#">Hubungi Kami</a></li>
+            <li><a href="#">Panduan Wisata</a></li>
+            <li><a href="#">Tips Wisata</a></li>
+            <li><a href="#">Transportasi</a></li>
           </ul>
-        </section>
+        </div>
 
-        <section class="footerSection">
-          <h3 class="footerJudul">Ikuti Kami</h3>
+        <div class="footerSection">
+          <h3 class="footerJudul">Autor Info</h3>
           <ul class="footerLink">
             <li>
               <a href="https://web.facebook.com/lalu.b.haris">Facebook</a>
@@ -114,12 +172,21 @@
               >
             </li>
           </ul>
-        </section>
+        </div>
+        <div class="footerSection">
+          <h3 class="footerJudul">Kontak</h3>
+          <ul class="footerLink">
+            <li>Email: bismaharis19@gmail.com</li>
+            <li>Telp: +62 8123 4567 890</li>
+            <li>Alamat: Lombok</li>
+          </ul>
+        </div>
       </div>
 
       <div class="copyright">
-        <p>&copy; 2025 Dicoding CSS Bisma. Hak Cipta Dilindungi.</p>
+        <p>&copy; 2025 LombokNesia. Hak Cipta Dilindungi.</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

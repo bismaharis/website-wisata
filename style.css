@@ -18,6 +18,7 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
+  padding-top: var(--header-height); /* Menambahkan padding-top untuk fixed header */
 }
 
 /* Header Start */
@@ -29,6 +30,7 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: var(--header-height);
 }
 
 .header {
@@ -37,6 +39,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .logo {
@@ -48,8 +51,16 @@ header {
   transition: var(--transition);
 }
 
-.logo:hover{
+.logo:hover {
   color: var(--accent-color);
+}
+
+.mobileMenu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
 }
 
 nav ul {
@@ -72,7 +83,7 @@ nav a:hover {
   color: var(--accent-color);
 }
 
-.dropdown{
+.dropdown {
   position: relative;
 }
 
@@ -80,7 +91,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-.dropdownKonten{
+.dropdownKonten {
   display: none;
   position: absolute;
   background-color: whitesmoke;
@@ -91,43 +102,30 @@ nav a:hover {
   overflow: hidden;
 }
 
-.dropdownKonten a{
+.dropdownKonten a {
   color: var(--text-color);
   padding: 12px 16px;
   display: block;
   transition: var(--transition);
 }
 
-.dropdownKonten.active {
+.dropdown:hover .dropdownKonten {
   display: block;
 }
 
-.dropdown:hover .dropdownKonten{
-  display: block;
-}
-
-.dropdownKonten a:hover{
+.dropdownKonten a:hover {
   background-color: var(--light-bg);
   color: var(--primary-color);
 }
 
-.mobileMenu span{
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: whitesmoke;
-  margin: 5px 0;
-  transition: var(--transition);
-}
-
-.hero{
-  margin-top: var(--header-height);
+/* Hero Section */
+.hero {
   position: relative;
   height: 600px;
   overflow: hidden;
 }
 
-.slide{
+.slide {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -135,17 +133,17 @@ nav a:hover {
   transition: opacity 0.5s ease-in-out;
 }
 
-.slideAktif{
+.slideAktif {
   opacity: 1;
 }
 
-.slide img{
+.slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.heroKonten{
+.heroKonten {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -156,13 +154,13 @@ nav a:hover {
   width: 80%;
 }
 
-.heroKonten h1{
+.heroKonten h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.sliderBtn{
+.sliderBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -175,22 +173,26 @@ nav a:hover {
   transition: var(--transition);
 }
 
-.sliderBtn:hover{
+.sliderBtn:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 
-.prev{
-  left:1rem;
+.prev {
+  left: 1rem;
 }
 
-.next{
+.next {
   right: 1rem;
 }
-/* Header End */
+
+/* Main Content */
+main {
+  margin: 2rem auto;
+}
 
 .main {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 0 2rem;
   display: flex;
   gap: 2rem;
@@ -209,20 +211,20 @@ article {
   overflow: hidden;
 }
 
-.artikel h2{
+.artikel h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   color: var(--primary-color);
   margin: 1.5rem;
 }
 
-.artikelMeta{
+.artikelMeta {
   margin: 0 1.5rem;
   color: #666;
   font-size: 0.9rem;
 }
 
-.artikelMeta span{
+.artikelMeta span {
   margin-right: 1rem;
 }
 
@@ -233,27 +235,26 @@ article {
   margin: 1.5rem 0;
 }
 
-.artikelKonten{
+.artikelKonten {
   padding: 1.5rem;
 }
 
-.artikelKonten h3{
+.artikelKonten h3 {
   color: var(--secondary-color);
   margin: 1.5rem 0 1rem;
 }
 
-.artikelTags{
+.artikelTags {
   margin-top: 2rem;
 }
 
-.artikelTags span{
+.artikelTags span {
   background: var(--light-bg);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   margin-right: 0.5rem;
   font-size: 0.9rem;
 }
-/* Article End */
 
 /* Aside Start */
 aside {
@@ -277,16 +278,16 @@ aside {
   border-bottom: 2px solid var(--accent-color);
 }
 
-.populerPost{
+.populerPost {
   margin-bottom: 2rem;
 }
 
-.postCard{
+.postCard {
   margin-bottom: 1.5rem;
   transition: var(--transition);
 }
 
-.postCard:hover{
+.postCard:hover {
   transform: translateY(-5px);
 }
 
@@ -298,12 +299,12 @@ aside {
   margin-bottom: 0.5rem;
 }
 
-.postCard h4{
+.postCard h4 {
   color: var(--secondary-color);
   margin: 0.5rem 0;
 }
 
-.postCard p{
+.postCard p {
   font-size: 0.9rem;
   color: #666;
 }
@@ -320,7 +321,7 @@ aside {
   cursor: pointer;
 }
 
-.katagoriList li:hover{
+.katagoriList li:hover {
   background-color: var(--light-bg);
   padding-left: 1.5rem;
   color: var(--secondary-color);
@@ -330,30 +331,29 @@ aside {
   border-bottom: none;
 }
 
-.cuaca{
+.cuaca {
   background-color: var(--light-bg);
   padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
 }
 
-.cuacaInfo{
+.cuacaInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
 
-.temp{
+.temp {
   font-size: 2rem;
   font-weight: 600;
   color: var(--primary-color);
 }
 
-.kondisi{
+.kondisi {
   color: #666;
 }
-/* Aside End */
 
 /* Footer Start */
 footer {
@@ -411,7 +411,6 @@ footer {
   margin-top: 3rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* Footer End */
 
 /* Responsive Start */
 @media screen and (max-width: 1024px) {
@@ -419,25 +418,21 @@ footer {
     flex-direction: column;
   }
 
-  aside{
+  aside {
     min-width: 100%;
   }
 
-  .heroKonten h1{
+  .heroKonten h1 {
     font-size: 2.5rem;
-  }
-
-  .dropdown {
-    display: none !important; /* Paksa hidden di desktop */
   }
 }
 
-@media screen and (max-width:768px){
-  .mobileMenu{
+@media screen and (max-width: 768px) {
+  .mobileMenu {
     display: block;
   }
   
-  nav{
+  nav {
     display: none;
     position: absolute;
     top: 100%;
@@ -447,30 +442,26 @@ footer {
     padding: 1rem;
   }
 
-  nav.active{
+  nav.active {
     display: block;
   }
 
-  nav ul{
+  nav ul {
     flex-direction: column;
     gap: 0.5rem;
   }
 
-  .dropdownKonten{
+  .dropdownKonten {
     position: static;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: none;
   }
 
-  .dropdown {
-    display: none !important; /* Paksa hidden di desktop */
-  }
-
-  .heroKonten h1{
+  .heroKonten h1 {
     font-size: 2rem;
   }
 
-  .artikelImg{
+  .artikelImg {
     height: 300px;
   }
 }
@@ -480,11 +471,11 @@ footer {
     padding: 1rem;
   }
 
-  .heroKonten h1{
+  .heroKonten h1 {
     font-size: 1.5rem;
   }
 
-  .artikel h2{
+  .artikel h2 {
     font-size: 1.5rem;
   }
 
@@ -492,9 +483,8 @@ footer {
     flex-direction: column;
   }
 
-  .sliderBtn{
+  .sliderBtn {
     padding: 0.5rem;
     font-size: 1rem;
   }
 }
-/* Responsive End */
